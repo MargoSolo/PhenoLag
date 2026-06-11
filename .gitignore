@@ -1,0 +1,19 @@
+# secrets — never commit
+.env
+_env.*
+
+# data — large / re-downloadable
+*.db
+*.db-shm
+*.db-wal
+sources/
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# os / scratch
+.DS_Store
