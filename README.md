@@ -84,7 +84,7 @@ The processed SQLite database and raw source databases are not included in this 
 
 ## Citation
 
-Soloshenko M. *PhenoLag: the phenotype-to-genotype lag across rare Mendelian disease.* ESHG 2026, poster P15.151.A.
+Soloshenko M. Borovikov A.*PhenoLag: the phenotype-to-genotype lag across rare Mendelian disease.* ESHG 2026, poster P15.151.A.
 
 ## License
 
