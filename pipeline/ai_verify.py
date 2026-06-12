@@ -1,32 +1,3 @@
-"""AI verification of clinical-description and gene-discovery years.
-
-Strategy
---------
-For each disease in our analysis sample we already have:
-  - Disease name + Orphanet ID + OMIM ID(s) + gene symbol
-  - A *first* clinical-description PMID and year (best-effort from
-    OMIM elink / HPO)
-  - A *first* genetic-verification PMID and year (G2P publications,
-    1980 floor + MeSH filter)
-
-Both can be wrong because each source picks the earliest *indexed*
-PMID, not the historically authoritative paper.
-
-Here we ask **two** Gemini models — gemini-2.5-flash and
-gemini-2.5-pro — to independently verify the years, with grounded
-Google Search enabled so each model can read OMIM, GeneReviews,
-PubMed and similar sources directly.  We compare the two responses
-to assess consensus.
-
-We do NOT download or store HTML.  Only the structured JSON output
-is cached in `ai_verification` (per disease, per model).
-
-Run:
-    python3 -m pipeline.ai_verify --pilot       # 20 outliers
-    python3 -m pipeline.ai_verify --suspect     # ~150 borderline
-    python3 -m pipeline.ai_verify --all         # full main sample
-"""
-
 from __future__ import annotations
 
 import argparse
