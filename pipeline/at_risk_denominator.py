@@ -1,12 +1,3 @@
-"""Honest at-risk denominator: ALL Orphanet 'Disease' disorders with a datable
-clinical-description year (gene-bearing or not), so time-to-molecular-solution is
-estimated on the true population, not only solved diseases.
-
-solved (event)   = in phenolag with a valid non-negative, non-suspect lag
-unsolved (censored) = everything else; duration = SNAPSHOT_YEAR - clinical_year
-
-Run: PYTHONPATH=. python -m pipeline.at_risk_denominator
-"""
 from __future__ import annotations
 import sqlite3
 import numpy as np
