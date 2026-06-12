@@ -1,12 +1,3 @@
-"""Apply the genetic-date union fallback as a targeted UPDATE (experiments branch).
-
-Recomputes first_genetic_year / lag / suspect flags ONLY for rows that have a
-clinical date but no genetic date, by dating the gene from HPO/ORPHA-cited
-PMIDs with the same molecular-genetics MeSH filter used for G2P.
-
-Targeted UPDATE (not a full calculate_lag rerun) so the enrichment + ML-feature
-columns populated by later pipeline steps are preserved, and no network is needed.
-"""
 from __future__ import annotations
 from pipeline.db import get_conn
 from pipeline.pubmed_dates import get_earliest_genetic_year
