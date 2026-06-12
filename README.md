@@ -1,8 +1,8 @@
 # PhenoLag
 
-**Measuring the phenotype-to-genotype lag in rare Mendelian disease — the years between a disease's first clinical description and the identification of its causal gene.**
+**Measuring the phenotype-to-genotype lag in rare Mendelian disease (the years between a disease's first clinical description and the identification of its causal gene).**
 
-PhenoLag pairs two dated events for each rare disease — the year of first clinical description and the year the causal gene was verified — and computes the gap between them across the whole rare-Mendelian-disease landscape. Built for ESHG 2026 (poster P15.151.A).
+PhenoLag pairs two dated events for each rare disease (the year of first clinical description and the year the causal gene was verified) and computes the gap between them across the whole rare-Mendelian-disease landscape. Built for ESHG 2026 (poster P15.151.A).
 
 ---
 
@@ -17,7 +17,7 @@ Computed on the final dataset of **N = 1,533** rare Mendelian diseases (snapshot
 | NGS-era diseases (described ≥ 2010) | median lag **0 years**; 94% solved within 2 years |
 | Co-discoveries (lag = 0) | 23% of all diseases |
 
-**By inheritance** (time-to-genetic-verification): autosomal recessive median 14 y, autosomal dominant 21 y, X-linked 25 y (log-rank p < 0.001). After Cox adjustment for the decade of description, **AR is genuinely faster than AD** (HR ≈ 0.83, p = 0.003); the **apparent X-linked disadvantage disappears** — it was confounding by era of description.
+**By inheritance** (time-to-genetic-verification): autosomal recessive median 14 y, autosomal dominant 21 y, X-linked 25 y (log-rank p < 0.001). After Cox adjustment for the decade of description, **AR is genuinely faster than AD** (HR ≈ 0.83, p = 0.003); the **apparent X-linked disadvantage disappears**   it was confounding by era of description.
 
 ---
 
@@ -27,7 +27,7 @@ Computed on the final dataset of **N = 1,533** rare Mendelian diseases (snapshot
 2. **Co-discoveries (lag = 0) are legitimate** for genomic-era diseases (clinical year ≥ 2005): the phenotype and the gene are reported together. They are not filtered out as artifacts.
 3. **Fixed 10-year window** for cross-era comparisons of restricted mean survival time (RMST). Ten years is the maximal follow-up common to every cohort (diseases described in the 2010s have under 15 years of follow-up), so it is the only apples-to-apples horizon.
 4. **Validated dating.** Automated dating is benchmarked against a 119-disease hand-curated gold set (`pipeline/validate_gold.py`). The long-lag tail was hand-checked in PubMed and artifacts (acquired cancers, modifier genes, mis-attributed early genes) were flagged out.
-5. **No difference-score tautology.** We never report corr(clinical_year, lag): because lag = gene_year − clinical_year, it correlates with clinical_year by construction (≈ −0.92 even under independence). Where a correlation is reported, it is corr(clinical_year, gene_year) = +0.52.
+5. **No difference-score tautology.** We never report corr(clinical_year, lag): because lag = gene_year - clinical_year, it correlates with clinical_year by construction (≈ −0.92 even under independence). Where a correlation is reported, it is corr(clinical_year, gene_year) = +0.52.
 
 `SNAPSHOT_YEAR = 2026` (in `pipeline/config.py`) is the single source of truth for "now".
 
@@ -88,4 +88,4 @@ Soloshenko M. Borovikov A.*PhenoLag: the phenotype-to-genotype lag across rare M
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT see [LICENSE](LICENSE).
