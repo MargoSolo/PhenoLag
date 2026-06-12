@@ -1,10 +1,3 @@
-"""Worklist of 'forgotten' rare diseases: clinically described long ago but still
-with NO known causative gene (absent from G2P/ClinGen/HPO/OMIM gene links).
-Ranked by years waiting. Includes phenotype/inheritance fields and a suggested
-gene-discovery strategy. -> forgotten_diseases_top50.xlsx
-
-Run: PYTHONPATH=. python -m pipeline.build_forgotten_list
-"""
 from __future__ import annotations
 import sqlite3
 import pandas as pd
