@@ -1,6 +1,6 @@
 # PhenoLag
 
-**Measuring the phenotype-to-genotype lag in rare Mendelian disease — the years between a disease's first clinical description and the identification of its causal gene.**
+**Measuring the phenotype-to-genotype lag in rare Mendelian disease  (the years between a disease's first clinical description and the identification of its causal gene).**
 
 PhenoLag pairs two dated events for each rare disease (year of first clinical description and year the causal gene was verified) and computes the gap across the whole rare-Mendelian-disease landscape. Built for ESHG 2026 (poster P15.151.A).
 
@@ -17,7 +17,7 @@ Computed on the final dataset of **N = 1,533** rare Mendelian diseases (snapshot
 | NGS-era diseases (described ≥ 2010) | median lag **0 years**; 94% solved within 2 years |
 | Co-discoveries (lag = 0) | 23% of all diseases |
 
-**By inheritance** (time-to-genetic-verification): autosomal recessive median 14 y, autosomal dominant 21 y, X-linked 25 y (log-rank p < 0.001). After Cox adjustment for the decade of description, **AR is genuinely faster than AD** (HR ≈ 0.83, p = 0.003); the **apparent X-linked disadvantage disappears** — it was confounding by era of description.
+**By inheritance** (time-to-genetic-verification): autosomal recessive median 14 y, autosomal dominant 21 y, X-linked 25 y (log-rank p < 0.001). After Cox adjustment for the decade of description, **AR is genuinely faster than AD** (HR ≈ 0.83, p = 0.003); the **apparent X-linked disadvantage disappears**   it was confounding by era of description.
 
 ---
 
@@ -75,8 +75,7 @@ pip install -r requirements.txt
 Place source files in `sources/` (Orphanet XMLs, G2P, ClinGen, HPO, HGNC, gnomAD) and set API keys in `.env`:
 
 ```
-NCBI_API_KEY=your_key_here
-S2_API_KEY=your_key_here       # optional, for Semantic Scholar
+NCBI_API_KEY=your_key_here 
 ```
 
 ### Full pipeline
@@ -108,4 +107,4 @@ Soloshenko M., Borovikov A. *PhenoLag: the phenotype-to-genotype lag across rare
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT  see [LICENSE](LICENSE).
