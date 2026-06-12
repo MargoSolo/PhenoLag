@@ -1,26 +1,3 @@
-"""Apply manual-curation decisions to the phenolag table.
-
-Reads `figures/curation_applied.csv` (produced from `manual_curation.xlsx`)
-and updates rows in `phenolag` for diseases curated by the analyst:
-
-  - decision == "keep" with positive `new_lag`:
-        clear `suspect_dating`, set `first_clinical_year = curated_clin_year`,
-        recompute `lag_years`, append `manual_curation` to `clin_source`.
-  - decision == "keep" with new_lag == 0:
-        same as above; lag is genuine codiscovery.
-  - decision == "keep" with new_lag < 0:
-        leave as suspect; the curated year still produces a negative lag,
-        flag stays for re-review (`suspect_reason = neg_lag_after_curation`).
-  - decision == "drop" / "unclear":
-        leave row untouched; record stays in historical_review only.
-
-Run after `run_pipeline.py` has rebuilt the DB:
-
-    python3 -m pipeline.apply_curation
-
-Idempotent — re-running it is safe.
-"""
-
 from __future__ import annotations
 
 import sqlite3
